@@ -40,20 +40,13 @@ function MovieCard () {
 
      
    <div className='header'>
-    <nav>
-      <ul>
-          <li> <a href='Popular'> Home</a></li>
-          <li> <a href='Drama'> Drama</a></li>
-          <li> <a href='Action'> Action</a></li>
-          <li> <a href="Comedy"> Comedy</a></li>
-      </ul>
-    </nav>
+ 
     <Add getAdd={getAdd} />
     <Search getKeyword={getKeyword} getRate={getRate} rate={rate}/>
   
   </div>
   <div className='container'>
-      {movies.card.filter(card=>(card.title.toLowerCase().includes(keyword.toLowerCase())&&card.etoile >= rate)).map((card) => (
+      {movies.card.filter(card=>(card.title.toLowerCase().includes(keyword.toLowerCase().trim())&&card.etoile >= rate)).map((card) => (
           
           <div className='box-movie'>
               <div className="movie">

@@ -55,7 +55,7 @@ return (
            <Form.Label>Star </Form.Label>
            <Form.Control
              type="email"
-             placeholder="URL Photo"
+             placeholder="Rating out of 5"
              autoFocus
              name='etoile'  onChange={handlchange}
            />
