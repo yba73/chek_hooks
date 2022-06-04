@@ -25,14 +25,14 @@ const Filter = (props) => {
   return (
     <div className='filter'>
         <div className='search'>
-            {/* <input placeholder='Search...' onChange={(e)=>props.getSearch(e.target.value)}/> */}
+            
             <Button style={{backgroundColor: '#b42f00', borderColor : '#1d1d1d'}} variant="primary" onClick={handleShow}>
       Search 
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Search Movie</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -41,9 +41,8 @@ const Filter = (props) => {
               <Form.Label >Enter Movie Name </Form.Label>
              
               <Form.Control
-                type="email"
+                type="text"
                 placeholder="Enter Movie Name"
-               
               />
                   
             </Form.Group>
@@ -61,9 +60,7 @@ const Filter = (props) => {
                 activeColor="orange"
                 value={1}
                 onChange={ratingChanged}
-                height ="200"
-                width = "200"
-        />
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
