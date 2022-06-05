@@ -21,10 +21,7 @@ const Add = ({ getAdd }) => {
 
   const listChanged = () => {
     getAdd(inputgroup);
-    setInputgroup({
-      title: "Movie Title",
-      etoile: 1,
-    });
+    setInputgroup({});
   };
 
   return (

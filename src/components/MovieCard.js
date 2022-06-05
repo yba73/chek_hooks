@@ -3,7 +3,13 @@ import ReactStars from "react-rating-stars-component";
 import "./style.css";
 
 const MovieCard = (props) => {
-  const { img, title, rating, etoile, description } = props;
+  const {
+    img,
+    title = "title",
+    rating = 0,
+    etoile = 0,
+    description = "",
+  } = props;
   return (
     <div className="box-movie">
       <div className="movie">
@@ -11,7 +17,6 @@ const MovieCard = (props) => {
         <div className="movie-details">
           <div className="box">
             <h4 className="title" alt="title">
-              {" "}
               {title}
             </h4>
             <p className="rating"> {rating}</p>
